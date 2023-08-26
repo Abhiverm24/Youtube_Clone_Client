@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 export default function WatchHistory() {
 
   const HistoryList = useSelector(state=>state.HistoryReducer)
-  console.log(HistoryList);
+  // console.log(HistoryList);
 
 
   // const history = [{

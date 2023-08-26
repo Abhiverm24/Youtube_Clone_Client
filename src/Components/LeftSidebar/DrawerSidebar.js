@@ -27,7 +27,7 @@ export default function DrawerSidebar({ toggleDrawer , toggleDrawerSidebar }) {
 
                 <div className="icon_sidebar_div">
                     <p>
-                        <img src={shorts} width={22} className={"icon_sidebar"} style={{margin:"auto 0.7rem"}}/>
+                        <img src={shorts} width={22} className={"icon_sidebar"} alt = "" style={{margin:"auto 0.7rem"}}/>
                         <div className="text_sidebar_icon">Shorts</div>
                     </p>
                 </div>
@@ -51,6 +51,13 @@ export default function DrawerSidebar({ toggleDrawer , toggleDrawerSidebar }) {
                     <p>
                         <FaHistory size={22} className={"icon_sidebar"} style={{margin:"auto 0.7rem"}}/>
                         <div className="text_sidebar_icon">History</div>
+                    </p>
+                </NavLink>
+
+                <NavLink to={'/historyliked'} className="icon_sidebar_div">
+                    <p>
+                        <FaHistory size={22} className={'icon_sidebar'} style={{ margin: 'auto 0.7rem' }} />
+                        <span className="text_sidebar_icon">Liked History</span>
                     </p>
                 </NavLink>
 

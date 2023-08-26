@@ -25,7 +25,7 @@
 
 .video_btns_title_VideoPage_cont{
     border-bottom: 3px solid rgba(245,222,179,0.175);
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .video_title_videoPage{

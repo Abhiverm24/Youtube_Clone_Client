@@ -1,3 +1,16 @@
+.container_Pages_App {
+    display: flex;
+    background-color: rgb(19, 19, 19);
+}
+
+.container2_Pages_App {
+    width: calc(100vw - 5rem);
+    height: calc(100vh - 3.80rem);
+    border-top: 2px solid rgba(128, 128, 128, 0.45);
+    overflow-y: auto;
+}
+
+
 .navigation_Home{
     color: white;
     background-color: rgb(37,37,37);

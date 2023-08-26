@@ -5,10 +5,12 @@ import WHLVideoLIst from './WHLVideoLIst'
 import { useSelector , useDispatch} from 'react-redux';
 import { clearHistory } from "../../actions/History";
 
+import { clearLikedHistory } from '../../actions/LikedHistory';
+
 export default function WHL({page,videoList}) {
 
     const CurrentUser = useSelector(state => state?.CurrentUserReducer)
-    console.log(videoList);
+    // console.log(videoList);
 
     const dispatch = useDispatch();
     const handleClearHistory = ()=>{
@@ -18,6 +20,15 @@ export default function WHL({page,videoList}) {
             }))
         }
     }
+
+
+    const handleClearLikedHistory = () => {
+        if (CurrentUser) {
+          dispatch(clearLikedHistory({
+            userId: CurrentUser?.result._id
+          }))
+        }
+      }
 
 
   return (
@@ -32,6 +43,10 @@ export default function WHL({page,videoList}) {
                         <div className="clear_history_btn" onClick={()=>handleClearHistory()}>
                             Clear History
                         </div>
+                    }
+                    {
+                        page==="Liked History" &&
+                        <div className="clear_history_btn" onClick={() => handleClearLikedHistory()}>Clear Liked History</div>
                     }
                 </div>
                 <div className="rightside_whl">

@@ -2,9 +2,9 @@ import * as api from '../api'
 
 export const addToHistory = (HistoryData)=>async(dispatch)=>{
     try{
-        console.log(HistoryData)
+        // console.log(HistoryData)
         const {data} = await api.addToHistory(HistoryData);
-        console.log(HistoryData)
+        // console.log(HistoryData)
         // console.log(data);
         dispatch({type:"POST_HISTORY",data});
         dispatch(getAllHistory())
@@ -16,7 +16,7 @@ export const addToHistory = (HistoryData)=>async(dispatch)=>{
 export const getAllHistory = ()=>async(dispatch)=>{
     try {
         const {data} = await api.getAllHistory();
-        console.log(data);
+        // console.log(data);
         dispatch({type: 'FETCH_ALL_HISTORY', payload:data})
     } catch (error) {
         console.log(error); 

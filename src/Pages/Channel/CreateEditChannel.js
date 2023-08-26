@@ -12,7 +12,7 @@ export default function CreateEditChannel({setEditCreateChannelBtn}) {
     //     },
     // };
 
-    const CurrentUser = useSelector(state => state.CurrentUserReducer)
+    const CurrentUser = useSelector(state => state.CurrentUserReducer);
 
 
     const [name, setName] = useState(CurrentUser?.result.name)

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 export default function LikedVideos() {
 
   const likedVideoList = useSelector(state=>state.likedVideoReducer)
-  console.log(likedVideoList);
+  // console.log(likedVideoList);
 
   // const likedvideo = [{
   //   _id : 1,

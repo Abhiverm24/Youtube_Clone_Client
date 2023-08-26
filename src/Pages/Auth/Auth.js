@@ -1,7 +1,10 @@
 import React from 'react'
 
 import './Auth.css'
-import { GoogleLogout } from 'react-google-login'
+// import { GoogleLogout } from 'react-google-login'
+import firebase from '../../firebase';
+import { getAuth, signOut } from 'firebase/auth';
+
 import { BiLogOut } from 'react-icons/bi'
 import { useDispatch } from 'react-redux'
 import { setCurrentUser } from '../../actions/currentUser'
@@ -10,10 +13,17 @@ import { Link } from 'react-router-dom'
 export default function Auth({User , setAuthBtn , setEditCreateChannelBtn}) {
 
     const dispatch = useDispatch();
-    const onLogoutSuccess = ()=>{
-        dispatch(setCurrentUser(null));
-        alert("Log Out Successfully");
-    };
+    const auth = getAuth(firebase)
+
+    const logout = async() => {
+        dispatch(setCurrentUser(null))
+            await signOut(auth)
+            window.location.reload()
+    }
+    // const onLogoutSuccess = ()=>{
+    //     dispatch(setCurrentUser(null));
+    //     alert("Log Out Successfully");
+    // };
 
   return (
     <div className="Auth_container" onClick={()=>setAuthBtn(false)}>
@@ -48,8 +58,12 @@ export default function Auth({User , setAuthBtn , setEditCreateChannelBtn}) {
                         onClick={()=>setEditCreateChannelBtn(true)}/>
                     </>
                 }
-            
+                
                 <div>
+                    <div className='btn_Auth' onClick={logout}><BiLogOut />Log out</div>
+                </div>
+            
+                {/* <div>
                     <GoogleLogout
                         clientId = {"389020969923-35pm2qdvlpmnis7m5fnh8ta3ibdkj3s7.apps.googleusercontent.com"}   
                         onLogoutSuccess={onLogoutSuccess}                 
@@ -60,7 +74,7 @@ export default function Auth({User , setAuthBtn , setEditCreateChannelBtn}) {
                             </div>
                         )}
                         />
-                </div>
+                </div> */}
             </div>
         </div>
     </div>

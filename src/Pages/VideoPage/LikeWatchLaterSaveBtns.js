@@ -9,10 +9,13 @@ import { likeVideo } from '../../actions/video'
 import { addTolikedVideo, deletelikedVideo } from '../../actions/likedVideo'
 import { addTowatchLater, deleteWatchLater } from '../../actions/watchlater'
 
+
+import { addToLikedHistory } from "../../actions/LikedHistory";
+
 export default function LikeWatchLaterSaveBtns({vv,vid}) {
 
     const CurrentUser = useSelector(state => state?.CurrentUserReducer)
-    console.log(CurrentUser)
+    // console.log(CurrentUser)
 
     const dispatch = useDispatch();
 
@@ -75,8 +78,13 @@ export default function LikeWatchLaterSaveBtns({vv,vid}) {
             );
             dispatch(addTolikedVideo({
                 videoId:vid,
-                Viewer:CurrentUser?.result._id
-,            }))
+                Viewer:CurrentUser?.result._id,
+            }))
+
+            dispatch(addToLikedHistory({
+                videoId: vid,
+                Viewer: CurrentUser?.result._id
+            }))
             setDislikeBtn(false);
         }
     }else{

@@ -5,7 +5,7 @@ import moment from 'moment'
 
 export default function ShowVideo({vid}) {
 
-    console.log(vid)
+    // console.log(vid)
     
   return (
     <>

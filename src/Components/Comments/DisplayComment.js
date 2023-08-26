@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteComment, editComment } from '../../actions/Comments';
 import moment from "moment";
 
-export default function DisplayComment({cId,commentsBody,commentOn, userId , userCommented}) {
+export default function DisplayComment({cId,commentsBody,commentOn, Location, userId , userCommented}) {
 
     const [commentBdy, setcommentBdy] = useState("");
     const [Edit, setEdit] = useState(false);
@@ -26,7 +26,7 @@ export default function DisplayComment({cId,commentsBody,commentOn, userId , use
         if(!commentBdy){
             alert("Type Your Comment")
         }else{
-            console.log(commentBdy);
+            // console.log(commentBdy);
             dispatch(editComment({
                 id:cmtId,
                 CommentBody:commentBdy,
@@ -55,9 +55,10 @@ export default function DisplayComment({cId,commentsBody,commentOn, userId , use
                 <input type="submit" value="change" className='comment_add_btn_comment' />
             </form>
 
-        </>):(
+        </>):(<>
             <p className="comment_body">{commentsBody}</p>
-        )
+            <p className='comment_body'>{Location}</p>
+        </>)
     }
     
     <p className="usercommented">{" "} - {userCommented} commented {moment(commentOn).fromNow()}</p>

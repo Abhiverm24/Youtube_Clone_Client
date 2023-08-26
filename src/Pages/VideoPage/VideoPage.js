@@ -18,17 +18,17 @@ export default function VideoPage() {
     // const channels = useSelector(state =>state?.channelReducer)
     // const currentChannel = channels.filter(c=>c._id===vid)[0];
     const vids = useSelector((state) => state.videoReducer)?.data;
-    console.log(vid)
-    console.log(vids)
+    // console.log(vid)
+    // console.log(vids)
 
     const vv = vids?.filter((q) => q._id === vid)[0];
-    console.log(vv)
+    // console.log(vv)
     const dispatch = useDispatch();
 
     const CurrentUser = useSelector(state => state?.CurrentUserReducer)
 
     const handleHistory = ()=>{
-        console.log("render");
+        // console.log("render");
         dispatch(
             addToHistory({
                 videoId:vid,

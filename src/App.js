@@ -15,6 +15,11 @@ import { getAllwatchLater } from './actions/watchlater';
 import { getAllHistory } from './actions/History';
 import { getAllComment } from './actions/Comments';
 
+
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+import { getAllLikedHistory } from './actions/LikedHistory';
+
 function App() {
 
   const dispatch = useDispatch()
@@ -25,6 +30,7 @@ function App() {
     dispatch(getAllwatchLater());
     dispatch(getAllHistory());
     dispatch(getAllComment());
+    dispatch(getAllLikedHistory())
     },[dispatch]
   )
   const [toggleDrawerSidebar, settoggleDrawerSidebar] = useState({
@@ -50,6 +56,18 @@ function App() {
   return (
     <>
     <Router>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       {videUploadPage && <VideoUpload setVidUploadPage = {setVidUploadPage}/>}
       {
         EditCreateChannelBtn &&

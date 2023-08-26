@@ -10,6 +10,7 @@ import YourVideo from '../Pages/YourVideo/YourVideo';
 import VideoPage from '../Pages/VideoPage/VideoPage';
 import Channel from '../Pages/Channel/Channel';
 import Search from '../Pages/Search/Search';
+import LikedHistory from '../Pages/LikedHistory/LikedHistory';
 
 
 export default function AllRoutes({setEditCreateChannelBtn,setVidUploadPage}) {
@@ -21,6 +22,7 @@ export default function AllRoutes({setEditCreateChannelBtn,setVidUploadPage}) {
             <Route path = '/history' element  = {<WatchHistory/>}/>
             <Route path = '/watchlater' element  = {<WatchLater/>}/>
             <Route path = '/likedvideo' element  = {<LikedVideos/>}/>
+            <Route path=  '/historyliked' element={<LikedHistory />} />
             <Route path = '/yourvideos' element  = {<YourVideo/>}/>
             <Route path = '/videopage/:vid' element  = {<VideoPage/>}/>
             <Route path = '/search/:searchQuery' element  = {<Search/>}/>

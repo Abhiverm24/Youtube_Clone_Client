@@ -13,6 +13,7 @@ export default function Library() {
   const watchLaterList = useSelector(state=>state.watchLaterReducer)
   const likedVideoList = useSelector(state=>state.likedVideoReducer)
   const HistoryList = useSelector(state=>state.HistoryReducer)
+  const LikedHistoryList = useSelector(state=>state.LikedHistoryReducer)
 
 
   // const vids = [{
@@ -92,6 +93,21 @@ export default function Library() {
                 <WHLVideoList page = {"Liked Videos"}
                   CurrentUser = {CurrentUser?.result._id}
                   videoList={likedVideoList}/>
+              </div>
+          </div>
+
+
+          <div className="container_libraryPage">
+              <h1 className='title_contaienr_librarypage'>
+                <b>
+                  <FaHistory/>
+                </b>
+                <b>Liked History</b>
+              </h1>
+              <div className="container_videolist_librarypage">
+                <WHLVideoList page = {"Liked History"}    
+                  CurrentUser = {CurrentUser?.result._id}
+                  videoList={LikedHistoryList}/>
               </div>
           </div>
         </div>
