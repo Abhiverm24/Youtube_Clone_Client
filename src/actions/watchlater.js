@@ -22,11 +22,12 @@ export const getAllwatchLater = ()=>async(dispatch)=>{
 }
 
 export const deleteWatchLater = (watchLaterData)=>async(dispatch)=>{
+    console.log(watchLaterData);
     try {
         const {videoId, Viewer} = watchLaterData;
         await api.deleteWatchLater(videoId,Viewer);
         dispatch(getAllwatchLater());
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
 }

@@ -66,7 +66,8 @@ export default function Verification({ setShow }){
         window.confirmationResult.confirm(code).then((result) => {
             // User signed in successfully.
             const user = result.user;
-            alert("done", { autoClose: 2000, onClose: () => { setShow(false) } })
+            alert("done", { autoClose: 1000})
+            setShow(false);
             dispatch(login({ email: userName }))
 
             // ...
@@ -96,7 +97,7 @@ export default function Verification({ setShow }){
                 <>
                     <form className='container2_CreateEditChannel' style={{ backgroundColor: 'black' }} onSubmit={onSignInSubmit}>
                         <h1 style={{ textAlign: "center" }}>Login</h1>
-                        <input type="text" placeholder='Create your userName' className='ibox' name='text' value={userName} onChange={(e) => setUserName(e.target.value)} required />
+                        <input type="text" placeholder='Create your Username' className='ibox' name='text' value={userName} onChange={(e) => setUserName(e.target.value)} required />
                         <PhoneInput value={phone_number} defaultCountry='IN'  className='ibox' placeholder="Enter Phone Number" onChange={setPhone_number} required />
                         <input type="submit" value="Submit" className='ibtn' /><br />
                         <GoogleButton style={{ margin: "0 auto", }} onClick={googleSignin} />

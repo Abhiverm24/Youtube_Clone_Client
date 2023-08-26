@@ -2,7 +2,7 @@ import React from 'react'
 import ShowVideoList from '../ShowVideoList/ShowVideoList'
 
 export default function WHLVideoLIst({page,CurrentUser,videoList}) {
-  console.log(videoList)
+  // console.log(videoList)
   return (
     <>
     {
