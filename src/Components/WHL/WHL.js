@@ -45,8 +45,8 @@ export default function WHL({page,videoList}) {
                         </div>
                     }
                     {
-                        page==="Liked History" &&
-                        <div className="clear_history_btn" onClick={() => handleClearLikedHistory()}>Clear Liked History</div>
+                        page==="Liked Videos History" &&
+                        <div className="clear_history_btn" onClick={() => handleClearLikedHistory()}>Clear Liked Videos History</div>
                     }
                 </div>
                 <div className="rightside_whl">

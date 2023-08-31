@@ -7,7 +7,7 @@ export default function LikedHistory() {
 
     return (
         <>
-            <WHL page={"Liked History"} videoList={LikedHistoryList} />
+            <WHL page={"Liked Videos History"} videoList={LikedHistoryList} />
         </>
     )
 }

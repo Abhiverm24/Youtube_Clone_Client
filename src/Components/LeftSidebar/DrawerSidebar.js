@@ -54,13 +54,6 @@ export default function DrawerSidebar({ toggleDrawer , toggleDrawerSidebar }) {
                     </p>
                 </NavLink>
 
-                <NavLink to={'/historyliked'} className="icon_sidebar_div">
-                    <p>
-                        <FaHistory size={22} className={'icon_sidebar'} style={{ margin: 'auto 0.7rem' }} />
-                        <span className="text_sidebar_icon">Liked History</span>
-                    </p>
-                </NavLink>
-
                 <NavLink to={'/yourvideos'} className="icon_sidebar_div">
                     <p>
                         <AiFillPlaySquare size={22} className={"icon_sidebar"} style={{margin:"auto 0.7rem"}}/>
@@ -79,6 +72,13 @@ export default function DrawerSidebar({ toggleDrawer , toggleDrawerSidebar }) {
                     <p>
                         <AiFillLike size={22} className={"icon_sidebar"} style={{margin:"auto 0.7rem"}}/>
                         <div className="text_sidebar_icon">Liked Videos</div>
+                    </p>
+                </NavLink>
+
+                <NavLink to={'/historyliked'} className="icon_sidebar_div">
+                    <p>
+                        <FaHistory size={22} className={'icon_sidebar'} style={{ margin: 'auto 0.7rem' }} />
+                        <span className="text_sidebar_icon">Liked Video History</span>
                     </p>
                 </NavLink>
             </div>

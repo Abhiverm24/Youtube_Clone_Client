@@ -102,10 +102,10 @@ export default function Library() {
                 <b>
                   <FaHistory/>
                 </b>
-                <b>Liked History</b>
+                <b>Liked Videos History</b>
               </h1>
               <div className="container_videolist_librarypage">
-                <WHLVideoList page = {"Liked History"}    
+                <WHLVideoList page = {"Liked Videos History"}    
                   CurrentUser = {CurrentUser?.result._id}
                   videoList={LikedHistoryList}/>
               </div>
