@@ -46,7 +46,7 @@ export default function Verification({ setShow }){
                 // user in with confirmationResult.confirm(code).
                 window.confirmationResult = confirmationResult;
                 setReplace(false)
-                alert("sent to your number within 5 minutes")
+                alert('OTP sent to Your Mobile. Clieck "OK"')
                 // ...
             }).catch((error) => {
                 // Error; SMS not sent
@@ -97,9 +97,9 @@ export default function Verification({ setShow }){
                 <>
                     <form className='container2_CreateEditChannel' style={{ backgroundColor: 'black' }} onSubmit={onSignInSubmit}>
                         <h1 style={{ textAlign: "center" }}>Login</h1>
-                        <input type="text" placeholder='Create your Username' className='ibox' name='text' value={userName} onChange={(e) => setUserName(e.target.value)} required />
-                        <PhoneInput value={phone_number} defaultCountry='IN'  className='ibox' placeholder="Enter Phone Number" onChange={setPhone_number} required />
-                        <input type="submit" value="Submit" className='ibtn' /><br />
+                        <input type="text" placeholder='Enter Name' className='ibox' name='text' value={userName} onChange={(e) => setUserName(e.target.value)} required />
+                        <PhoneInput value={phone_number} defaultCountry = 'IN' className='ibox' placeholder="Enter Phone Number" onChange={setPhone_number} required />
+                        <input type="submit" value="Done" className='ibtn' /><br />
                         <GoogleButton style={{ margin: "0 auto", }} onClick={googleSignin} />
                     </form>
                 </>
@@ -107,7 +107,7 @@ export default function Verification({ setShow }){
                 <>
                     <form className='container2_CreateEditChannel' style={{ backgroundColor: 'black' }} onSubmit={otpsubmit}>
                         <h1 style={{ textAlign: "center" }}>Enter OTP</h1>
-                        <input type="text" name='number' className='ibox' placeholder='Enter OTP' value={otp} onChange={(e) => setOtp(e.target.value)} required />
+                        <input type="text" name='number' className='ibox' placeholder='ONE TIME PASSWORD' value={otp} onChange={(e) => setOtp(e.target.value)} required />
                         <input type="submit" value="Login" className='ibtn' />
                     </form>
                 </>
