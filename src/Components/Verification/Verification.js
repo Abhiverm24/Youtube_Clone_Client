@@ -46,7 +46,8 @@ export default function Verification({ setShow }){
                 // user in with confirmationResult.confirm(code).
                 window.confirmationResult = confirmationResult;
                 setReplace(false)
-                alert('OTP sent to Your Mobile. Clieck "OK"')
+                // alert('OTP sent to Your Mobile. Clieck "OK"')
+                alert('sent to your number within 5 minutes')
                 // ...
             }).catch((error) => {
                 // Error; SMS not sent
