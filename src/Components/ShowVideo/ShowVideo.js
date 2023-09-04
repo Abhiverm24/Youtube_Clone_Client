@@ -11,7 +11,7 @@ export default function ShowVideo({vid}) {
     <>
         <Link to={`/videopage/${vid?._id}`}>
             {/* <video src = {`"http://localhost:8000/"${vid.filePath}`}  */}
-            <video src = {`"https://youtube-clone-s5ep.onrender.com/"${vid.filePath}`} 
+            <video src = {`"https://youtube-clone-9tp3.onrender.com/"${vid.filePath}`}
             className='video_ShowVideo'/>
         </Link>
 
