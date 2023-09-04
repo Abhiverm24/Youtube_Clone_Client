@@ -34,7 +34,7 @@ export default function VideoUpload({setVidUploadPage}) {
         if(!title){
             alert("Please Enter a title of the video");
         }else if(!videofile){
-            alert("Please attach a video file")
+            alert("Please attach a video file");
         }else if(videofile.size > 1000000){
             alert("Please attach video file less than 1mb")
         }else{
