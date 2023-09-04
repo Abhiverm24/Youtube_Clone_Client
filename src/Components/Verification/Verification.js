@@ -36,8 +36,8 @@ export default function Verification({ setShow }){
     }
 
     const onSignInSubmit = (e) => {
-        e.preventDefault()
-        configureCaptcha()
+        e.preventDefault();
+        configureCaptcha();
         const phoneNumber = phone_number
         const appVerifier = window.recaptchaVerifier;
         signInWithPhoneNumber(auth, phoneNumber, appVerifier)
