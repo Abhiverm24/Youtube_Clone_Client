@@ -58,8 +58,8 @@ export default function VideoPage() {
     <div className="container_videoPage">
         <div className="container2_videoPage">
             <div className="video_display_screen_videoPage">
-            {/* <video src = {`http://localhost:8000/${vv.filePath}`} className={"video_ShowVideo_videoPage"} */}
-            <video src = {`https://youtube-clone-9tp3.onrender.com/${vv.filePath}`} className={"video_ShowVideo_videoPage"}
+            <video src = {`http://localhost:8000/${vv.filePath}`} className={"video_ShowVideo_videoPage"}
+            // {/* <video src = {`https://youtube-clone-9tp3.onrender.com/${vv.filePath}`} className={"video_ShowVideo_videoPage"} */}
                 controls
                 autoPlay></video>
                 <div className="video_details_videoPage">
