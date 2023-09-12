@@ -6,6 +6,7 @@ export const login = (authData)=>async(dispatch)=>{
         dispatch({type:"AUTH",data});
         dispatch(setCurrentUser(JSON.parse(localStorage.getItem('Profile'))))
     } catch(error){
+        console.log(error);
         alert(error);
     }
 };
